@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace homeworkMigration
 {
-    public class Aderses
+    public class Addrses
     {
-        public int AdersesID { get; set; }
+        public int AddrsesID { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
        

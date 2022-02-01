@@ -33,6 +33,6 @@ namespace homeworkMigration.Models
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
         public DbSet<Person> Persons { get; set; }
-        public DbSet<Aderses> Aderses { get; set; }
+        public DbSet<Addrses> Aderses { get; set; }
     }
 }
