@@ -1,0 +1,28 @@
+.container {
+    border: 200px solid purple;
+    display: flex;
+    justify-content: space-between;
+   
+  
+}
+
+.container > div {
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    
+    font-size: 2em;
+    
+}
+
+.home {
+    background-color: red;
+    
+}
+.search {
+    
+    background-color: aqua;
+}
+.logout {
+    background-color: green;
+}

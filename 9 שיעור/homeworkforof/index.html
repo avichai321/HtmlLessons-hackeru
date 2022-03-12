@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const users = [
+            {
+                username: "Naruto",
+                city: "konoha"
+            },
+
+            {
+                username: "Luffy",
+                city: "New-World"
+            }
+        ];
+
+        function start() {
+            let ul = document.getElementById("users-list")
+            for (const u of users) {
+                let li = document.createElement("li")
+                li.innerText = "username :" + u.username + "\ncity:" + u.city
+                ul.appendChild(li)
+            }
+        }
+
+
+    </script>
+</head>
+
+<body onload="start()">
+    <ul id="users-list"></ul>
+</body>
+
+</html>

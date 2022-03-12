@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>טופס הרשמה</title>
+</head>
+
+<body>
+    <h1>טופס הרשמה</h1>
+<form action="./index2.html" method="get">
+<div>
+
+<label>
+    שם פרטי 
+    <input type="text" name="FirstName" id="FirstName" placeholder="שם פרטי">
+</label>
+</div>
+
+<div>
+    <label>
+        שם משפחה
+        <input type="text" name="Lastname" id="Lastname" placeholder="שם משפחה">
+    </label>
+</div>
+
+<div>
+    <label >
+        תאריך לידה
+<input type="date" name="DateOfBirth" id="DateOfBirth">
+
+    </label>
+    
+</div>
+
+<div>
+    <label >
+        כתובת
+        <input type="text" name="Address" id="Address" placeholder="כתובת">
+    </label>
+</div>
+<div>
+    <label>
+עיר 
+<select name="City" id="City">
+<option value="zefat">צפת</option>
+<option value="rishon">ראשון לציון</option>
+<option value="Beitshean">בית שאן</option>
+<option value="TelAviv">תל אביב</option>
+<option value="Yavne">יבנה</option>
+</select>
+    </label>
+</div>
+
+<div>
+    <label>
+        זכר
+        <input type="radio" name="Sex" id="Male" value="Male">
+    </label>
+</div>
+<div>
+    <label>
+        נקבה
+        <input type="radio" name="Sex" id="Female" value="Female">
+    </label>
+</div>
+
+<div>
+    <label for="Kosher">
+        מזון כשר בארוחת צהריים
+        <input type="checkbox" name="Agree" id="Agree">
+    </label>
+</div>
+
+<div>
+    <button type="submit">שלח טופס</button>
+    <button type="reset">אפס טופס</button>
+</div>
+</form>
+</body>
+</html>

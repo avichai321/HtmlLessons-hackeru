@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var takejson= {
+            "userId": 1,
+            "id": 1,
+            "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+            "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+            }
+        var stTake= JSON.stringify(takejson);
+        var newjson= JSON.parse(stTake);
+        function json1()
+        {
+        document.getElementById("userid").innerText = newjson.userId;
+        document.getElementById("id").innerText = newjson.id;
+        document.getElementById("title").innerText = newjson.title;
+        document.getElementById("body").innerText = newjson.body;
+        }
+
+        function changeDetail()
+        {
+            newjson.userId=2
+            newjson.id = 2
+            newjson.title= "itsdone"
+            newjson.body= "finally"
+            document.getElementById("userid").innerText = newjson.userId;
+            document.getElementById("id").innerText = newjson.id;
+            document.getElementById("title").innerText = newjson.title;
+            document.getElementById("body").innerText = newjson.body;
+            var afterjson = JSON.stringify(newjson);
+            document.getElementById("after").innerText = "the json after the change : " + afterjson;
+        }
+        
+
+
+    </script>
+</head>
+<body onload="json1()" >
+    <h1>before</h1>
+    <p>userid : <span id="userid"></span></p>
+    <p>Id : <span id="id" ></span> </p>
+    <p>title : <span id="title"></span></p>
+    <p>body :<span id="body"></span></p>
+    
+    <br>
+    <input type="button" value="Change" onclick="changeDetail()">
+    <div id="after">
+
+
+    </div>
+</body>
+</html>

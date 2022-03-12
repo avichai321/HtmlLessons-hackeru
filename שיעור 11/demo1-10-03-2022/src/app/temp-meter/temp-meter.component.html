@@ -1,0 +1,9 @@
+
+<div>
+    <label for="temp">
+        Your Temprature
+        <input type="number" #tempNum name="temp" id="temp" (input)="onChangeTemp(tempNum.value)" >
+
+    </label>
+    <div>{{tempDesc}}</div>
+</div>

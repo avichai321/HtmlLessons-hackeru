@@ -1,0 +1,31 @@
+.container {
+    border: 200px solid purple;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-style: groove;
+   
+   
+  
+}
+
+.container > div {
+    border-radius:  20px;
+    width: 400px;
+    height: 400px;
+    margin: 10px;
+    font-size: 20em;
+    
+}
+
+.home {
+    background-color: red;
+    
+}
+.search {
+    
+    background-color: aqua;
+}
+.logout {
+    background-color: green;
+}

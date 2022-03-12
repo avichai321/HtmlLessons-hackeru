@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <script>
+        var customerBalance = 75;
+
+        var ex = [
+            "ביגוד 10",
+        "מזון 6",
+        "חשמל 8"];
+         
+         var html = "";
+         for (var i = 0; i < ex.length; i++) {
+             let element = ex[i];
+             console.log(element);
+             html +=  `<li>${element}</li>`;
+         }
+        
+         var indexOfBigud = ex.indexOf("ביגוד 10");
+        console.log("Bigud item is in " + indexOfBigud);
+
+        var deletedItems = ex.splice(1,1);
+        console.log('deletedItems  = ',deletedItems);
+        console.log(ex);
+
+
+        
+        setTimeout(() => {
+            document.getElementById("myList").innerHTML = html;
+        }, 1000);
+
+        //id = myList
+        
+
+        //var  futureExpanse = parseFloat(prompt("כמה אתה מתכנן להוציא ?"));
+
+        function calcAmountThatWillRemain(customerBalance, futureExpanse) {
+            
+            amountThatWillRemain  = (customerBalance - futureExpanse);
+            
+            return amountThatWillRemain;
+        }
+
+        function getMsg(amount) {
+            return `Amount that will remain: ${amount}`;    
+        }
+        
+        function showBox2() {
+            var el = document.getElementById("box2");
+            el.style.display = 'block';
+        }
+
+        function calc() {
+            var el = document.getElementById("fe");    
+            var  futureExpanse = parseFloat(el.value);
+            amountThatWillRemain  = (customerBalance - futureExpanse);
+            document.getElementById("futureExpanse").innerText = futureExpanse;
+            document.getElementById("msg").innerText = getMsg(amountThatWillRemain);
+        }
+
+        function init() {
+            // if (futureExpanse || futureExpanse === 00 ) {
+            //         var amount1 = calcAmountThatWillRemain(customerBalance,futureExpanse);
+            //         var msg2 = getMsg(amount1);
+                     document.getElementById("balance").innerText = customerBalance;
+            //         document.getElementById("futureExpanse").innerText = futureExpanse;
+            //         document.getElementById("msg").innerText = msg2;
+            // }
+            
+            // if ("1" === 1 ){
+            //     console.log('1 = 1');
+            // } else {
+            //     console.log('maybe the type is not same ???',typeof("1"), typeof 1 );
+            // }
+
+                // document.getElementById("myList").innerHTML = html;
+        }
+        
+        var amountThatWillRemain;
+    </script>
+</head>
+
+<body onload="init()">
+    <div class="container">
+        <header class="row">
+            <div class="col-12">
+                <h1>ZillionMoney Bank</h1>
+                <hr>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Your Status</h5>
+                        <p class="card-text">Balance: 
+                            <span id="balance">50</span>
+                            NIS
+                        
+                        </p>
+                        <button class="btn btn-primary" onclick="showBox2()">Show Other Box</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6" id="box2" style="display: none;" >
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">How much do you plan to expanse ? </h5>
+                        <p class="card-text">
+                                <label for="exampleFormControlInput1" class="form-label">Type a number...</label>
+                                <input type="number" class="form-control" id="fe" placeholder="123...">
+                        </p>
+                        <button onclick="calc()" class="btn btn-primary">Calc</button>
+                        <br>
+                        <br>
+                            You plan to expanse : 
+                            <span id="futureExpanse">-</span>
+                        <br>
+                            <span id="msg">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">הוצאות מקובלות</h5>
+                        <p class="card-text">
+                            <ul id="myList">
+                                
+                            </ul>
+
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+    
+</body>
+
+</html>

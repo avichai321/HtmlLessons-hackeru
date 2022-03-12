@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const myAry_1 = [1,2,3]
+const myAry_2 = [4,5,6]
+const data = [...myAry_1,...myAry_2];
+console.log('data',data)
+
+const [myFirstElement, my2ndElement,,,mySomeElement] =data
+console.log("myFirstElement" , myFirstElement);
+console.log("my2ndElement" , my2ndElement);
+console.log("mySomeElement",mySomeElement)
+        let obj = {
+            a:"bamba",
+            b:2,
+            c:3
+
+        };
+        const{a : MYa ,b} =obj;
+        console.log("MYa",MYa)
+        console.log("b",b) 
+    </script>
+</body>
+</html>

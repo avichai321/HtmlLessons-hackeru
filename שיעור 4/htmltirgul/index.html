@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .table1{
+        display: grid;
+       height: 400px;
+       grid-template-columns: auto auto auto auto;
+       grid-auto-rows: 30px auto auto 30px;
+       grid-template-areas: 
+       "num num num num"
+       "Name Name Name Name"
+       ;
+           
+    }
+    .num{
+        grid-area: num;
+        background-color: aqua;
+    }
+    .Name{
+        grid-area: Name;
+        background-color: blue;
+    }
+</style>
+</head>
+<body>
+    <p>Eren yeagar</p>
+    <p>Mikasa ackerman</p>
+    <p>Armin Arlert</p>
+    <p>Ymir Fritz</p>
+    <p>Annie Leonheart</p>
+    
+    <ul>
+        <li>
+            attack titan
+        </li>
+        <li>
+            colossal titan
+        </li>
+        <li>
+            war hammer titan
+        </li>
+    </ul>
+
+    <table class="table1">
+        <tr class="num">
+            <th>titan 1</th>
+            <th>titan 2</th>
+            <th>titan 3</th>
+            <th>titan 4</th>
+        </tr>    
+            <tr class="Name">
+                <td>Founder Titan</td>
+                <td>Beast Titan </td>
+                <td>Jaw Titan</td>
+                <td>Cart Titan</td>           
+            </tr>        
+    </table>
+
+    <div>
+        <input type="text" id="FirstName" placeholder="First">
+    </div>
+        <div>
+            <input type="text" id="LastName" placeholder="Last">
+        </div>
+        <div>
+            <input type="button" value="Connect">
+        </div>
+
+
+    </body>
+</html>

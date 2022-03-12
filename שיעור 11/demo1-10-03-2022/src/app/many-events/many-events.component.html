@@ -1,0 +1,32 @@
+<hr>
+<div class="rtl">
+    <h2>מסיבת אירועים</h2>
+    
+    <!-- <button class="btn btn-primary" (click)="getData('סודי ביותר')">לחץ עלי!</button> -->
+    <button class="btn btn-primary" (click)="toggle()">Toggle me</button>
+    <div style="background:yellow;" [hidden]="isHidden">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, vero facere? Pariatur blanditiis, ipsum fuga dolorum deserunt, ratione unde, accusamus explicabo dolore eum numquam nisi dolorem facere corporis aut! Ducimus!
+    </div>
+    <br>
+    <input type="text" placeholder="keyup" #input1 (keyup)="getData(input1.value)">
+    <br>
+    <input type="text" placeholder="keydown" #input2 (keydown)="getData(input2.value)">
+    <br>
+    <input type="text" placeholder="blur" #input3 (blur)="getData(input3.value)">
+    <br>
+    <input type="text" placeholder="input" #input4 (input)="getData(input4.value)">
+    <br>
+    <p  style="border: 1px solid blue;" (mouseover)="getData('Mouse Over')">Mouse Over</p>    
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p style="border: 1px solid orange;" (mouseleave)="getData('Mouse Leave')">Mouse Leave</p>
+    <br>
+    <input type="text" placeholder="with event" id="myId" #input5 (input)="getEventAndData($event,'some data')">
+    
+    <app-menu></app-menu>
+    <br>
+</div>

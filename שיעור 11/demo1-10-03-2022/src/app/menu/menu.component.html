@@ -1,0 +1,16 @@
+<h2>Menu</h2>
+<ul>
+    <li><a target="{{links[0].target}}"   href="{{links[0].link}}">{{links[0].title}}</a></li>
+    <li><a target="{{links[1].target}}" href="{{links[1].link}}">{{links[1].title}}</a></li>
+</ul>
+
+<ul>
+    <li *ngFor="let l of links">
+        <a href="{{l.link}}">{{l.title}}</a>
+        
+        <span *ngFor="let tag of l.tags">
+            {{tag}}
+        </span>
+    </li>
+    
+</ul>

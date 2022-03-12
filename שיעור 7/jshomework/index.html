@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+let list = [{title:"item1"}, {title:"item2"} , {title:"item3"} , {title:"item4"} , {title:"item5"} ];
+
+function addtolist()
+{
+    let alllist = document.getElementById("ultable");    
+        var newitem = document.createElement("li")
+        var textitem=document.getElementById("addtext")
+        newitem.appendChild(document.createTextNode(textitem.value));
+        alllist.appendChild(newitem);
+        list.push({title : newitem.innerHTML});
+        textitem.value="";
+}
+
+function searchinlist()
+{
+    let searchbox = document.getElementById("searchtext");
+    searchbox.addEventListener('keyup',function(e) {
+   let wordse = e.target.value;
+    let matchvalue = list.filter(function(row){
+    var ismatched =row.title.includes(wordse);
+    return ismatched;
+    });
+    console.log(matchvalue);
+getlist(matchvalue)
+    });
+}
+function getlist(listofitems)
+{
+    let alllist = document.getElementById("ultable");
+    alllist.innerText = "";
+
+for (let i = 0; i < listofitems.length; i++) 
+{
+    let tlist = document.createElement("li");
+    tlist.innerText= listofitems[i].title;
+    alllist.appendChild(tlist);
+            
+}
+
+}
+function init(){
+
+getlist(list);
+searchinlist();
+}
+</script>
+</head>
+<body onload= "init()">
+    <h3>List of items</h3>
+    <div>
+        <input type="text" id="addtext">
+        <input type="button" id="addbutton" value="add" onclick="addtolist()">
+    </div>
+    <div>
+        <br>
+        <input type="text" id="searchtext" placeholder="search">
+    </div>
+    <ul id="ultable">
+        <li></li>
+        
+    </ul>
+    
+</body>
+</html>

@@ -1,0 +1,12 @@
+<div style="direction:rtl">
+
+    <label for="temp">
+        מה הטמפרטורה אצלך ? 
+        <input type="number" #temp (input)="handleTempChange(temp.value)" >
+    </label>
+    <span style="font-weight: 900;">
+        {{ tempDesc }}
+
+    </span>
+
+</div>

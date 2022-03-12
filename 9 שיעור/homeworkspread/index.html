@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        class imagecl 
+        {
+            clone() 
+            {
+                let newcopy={...image}
+                return newcopy     
+            }
+        }
+
+        var image = {
+        width: 50,
+        height: 100,
+        artist: {
+                name: 'De Vinci',
+                originCountry: 'Italy'
+        }
+        };
+
+        function start()
+        {
+            var cimg = new imagecl
+            var newimg = cimg.clone 
+            newimg = {
+                width: 40,
+                height: 70,
+                artist: {
+                    name: 'winter',
+                    originCountry: 'winterfeel'
+                }
+            }
+
+            console.log(newimg);
+            console.log(image);
+        }
+    
+    </script>
+</head>
+
+<body onload="start()">
+    
+</body>
+</html>
