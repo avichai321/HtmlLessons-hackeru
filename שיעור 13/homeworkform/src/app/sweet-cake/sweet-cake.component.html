@@ -1,0 +1,54 @@
+<p>עוגההה</p>
+<form #myCake = "ngForm" (submit)="Submitfunc(myCake.value)">
+    <input type="text" ngModel name="cakename" placeholder="שם העוגה">
+    <p>סוג העוגה:</p>
+    <input type="radio" ngModel name="caketype" value="chokocake">
+    <label for="chokocake">עוגת שוקולד</label><br>
+    <input type="radio" ngModel name="caketype" value="chessecake">
+    <label for="chessecake">עוגת גבינה</label><br>
+    <input type="radio" ngModel name="caketype" value="carrotcake">
+    <label for="carrotcake">עוגת גזר</label><br>
+    <br>
+    <p>תגיות על העוגה: (הפרד בפסיקים)</p>
+    <input type="text" ngModel name="caketags" placeholder="הכנס תגיות">
+    <br>
+    <button>submit</button>
+</form>
+
+<div>
+    <p>שם העוגה: {{cake.cakename}}</p>
+    <p>סוג העוגה : {{cake.caketype}}</p>
+    <p>תגיות העוגה:</p>
+    <ul>
+        <li *ngFor="let item of cake.caketags">{{item}}</li>
+    </ul>
+    <div [ngSwitch]="cake.caketype">
+        <p>תמונה של העוגה:</p>
+        <img *ngSwitchCase="'chokocake'" src="https://www.morcake.co.il/wp-content/uploads/2021/10/morcake-%D7%A2%D7%95%D7%92%D7%AA-%D7%A9%D7%95%D7%A7%D7%95%D7%9C%D7%93-%D7%91%D7%A7%D7%98%D7%A0%D7%94-1-scaled.jpg" width="200">
+        <img *ngSwitchCase="'chessecake'" src="https://happykitchen.co.il/wp-content/uploads/2020/05/%D7%A2%D7%95%D7%92%D7%AA-%D7%92%D7%91%D7%99%D7%A0%D7%94-%D7%A4%D7%A8%D7%95%D7%A8%D7%99%D7%9D-%D7%A4%D7%A8%D7%95%D7%A1%D7%94.jpg" width="200">
+        <img *ngSwitchCase="'carrotcake'" src="https://st1.foodsd.co.il/Images/Recipes/xxl/Recipe-6602-0e7geazbN0WnYbcx.jpg" width="200">
+        <img *ngSwitchDefault="" src="" >
+        
+    </div>
+    <ul *ngIf="cake.caketype=='carrotcake'">
+        מתכון לעוגת גזר:
+       <li>3ביצים L</li> 
+        <li>1 1/2  כוסות או 360גרם סוכר חום כהה</li>
+        <li>1שקית סוכר וניל</li>
+        <li>1 כוס או 240מ"ל שמן קנולה</li>
+        <li>4 גדולים או 300גרם גזרים</li>
+        <li>1 1/2 כוסות או 150גרם שבבי קוקוס</li>
+        <li>2 כוסות או 280גרם קמח לבן</li>
+        <li>2כפיות אבקת סודה לשתייה</li>
+        <li>2כפיות גדושות קינמון טחון</li>
+        <li> 1קורט מלח דק</li>
+        <li>1כוס אגוזי מלך</li>
+        <li>1כוס צימוקים בהירים</li>
+        
+
+
+
+
+    </ul>
+
+</div>
